@@ -40,6 +40,8 @@
             this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.überToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gb_volume = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nud_timer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_volume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_volume)).BeginInit();
@@ -49,7 +51,7 @@
             // 
             // pb_volume
             // 
-            this.pb_volume.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.pb_volume.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pb_volume.Location = new System.Drawing.Point(12, 27);
             this.pb_volume.Name = "pb_volume";
@@ -75,6 +77,7 @@
             // 
             // nud_timer
             // 
+            this.nud_timer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nud_timer.Location = new System.Drawing.Point(222, 56);
             this.nud_timer.Maximum = new decimal(new int[] {
             1000,
@@ -145,6 +148,9 @@
             // 
             // gb_volume
             // 
+            this.gb_volume.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gb_volume.Controls.Add(this.label1);
             this.gb_volume.Controls.Add(this.tb_volume);
             this.gb_volume.Controls.Add(this.nud_volume);
             this.gb_volume.Location = new System.Drawing.Point(12, 82);
@@ -154,17 +160,40 @@
             this.gb_volume.TabStop = false;
             this.gb_volume.Text = "Warnung";
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.Location = new System.Drawing.Point(216, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "0 = Aus";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(117, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Aktualisierungsrate:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 194);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.gb_volume);
             this.Controls.Add(this.nud_timer);
             this.Controls.Add(this.l_volume);
             this.Controls.Add(this.pb_volume);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
+            this.MinimumSize = new System.Drawing.Size(160, 233);
             this.Name = "Form1";
             this.Text = "Loud-O-Meter";
             ((System.ComponentModel.ISupportInitialize)(this.nud_timer)).EndInit();
@@ -192,6 +221,8 @@
         private System.Windows.Forms.ToolStripMenuItem einstellungenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem überToolStripMenuItem;
         private System.Windows.Forms.GroupBox gb_volume;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
