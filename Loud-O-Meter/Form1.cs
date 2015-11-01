@@ -33,5 +33,15 @@ namespace Loud_O_Meter
         {
             t_volume.Interval = (int)nud_timer.Value;
         }
+
+        private void tb_volume_Scroll(object sender, EventArgs e)
+        {
+            nud_volume.Value = tb_volume.Value;
+        }
+
+        private void nud_volume_ValueChanged(object sender, EventArgs e)
+        {
+            tb_volume.Value = (int)nud_volume.Value;
+        }
     }
 }
