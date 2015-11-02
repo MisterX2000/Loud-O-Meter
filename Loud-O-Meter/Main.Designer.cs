@@ -1,6 +1,6 @@
 ﻿namespace Loud_O_Meter
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Erforderliche Designervariable.

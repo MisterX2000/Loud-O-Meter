@@ -13,11 +13,11 @@ using NAudio.CoreAudioApi;
 
 namespace Loud_O_Meter
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         private int warnVol;
 
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
