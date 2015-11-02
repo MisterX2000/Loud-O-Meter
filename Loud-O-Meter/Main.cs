@@ -34,6 +34,11 @@ namespace Loud_O_Meter
             if (vol >= warnVol && warnVol != 0)
             {
                 SystemSounds.Beep.Play();
+                this.BackColor = Color.Red;
+            }
+            else
+            {
+                this.BackColor = SystemColors.Control;
             }
         }
 
@@ -52,6 +57,18 @@ namespace Loud_O_Meter
         {
             warnVol = (int)nud_volume.Value;
             tb_volume.Value = (int)nud_volume.Value;
+        }
+
+        private void einstellungenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Settings settingsForm = new Settings();
+            settingsForm.Show();
+        }
+
+        private void überToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About aboutForm = new About();
+            aboutForm.Show();
         }
     }
 }

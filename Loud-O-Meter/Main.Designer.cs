@@ -139,12 +139,14 @@
             this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
             this.einstellungenToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.einstellungenToolStripMenuItem.Text = "Einstellungen";
+            this.einstellungenToolStripMenuItem.Click += new System.EventHandler(this.einstellungenToolStripMenuItem_Click);
             // 
             // überToolStripMenuItem
             // 
             this.überToolStripMenuItem.Name = "überToolStripMenuItem";
             this.überToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.überToolStripMenuItem.Text = "Über";
+            this.überToolStripMenuItem.Click += new System.EventHandler(this.überToolStripMenuItem_Click);
             // 
             // gb_volume
             // 
@@ -181,7 +183,7 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Aktualisierungsrate:";
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -194,7 +196,7 @@
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
             this.MinimumSize = new System.Drawing.Size(160, 233);
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Loud-O-Meter";
             ((System.ComponentModel.ISupportInitialize)(this.nud_timer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_volume)).EndInit();
