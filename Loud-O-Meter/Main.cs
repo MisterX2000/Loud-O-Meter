@@ -15,7 +15,8 @@ namespace Loud_O_Meter
 {
     public partial class Main : Form
     {
-        private int warnVol;
+        private int warnVol = Properties.Settings.Default.warnVol;
+        private int timerInterval = Properties.Settings.Default.Interval;
 
         public Main()
         {
@@ -34,7 +35,7 @@ namespace Loud_O_Meter
             if (vol >= warnVol && warnVol != 0)
             {
                 SystemSounds.Beep.Play();
-                this.BackColor = Color.Red;
+                this.BackColor = Properties.Settings.Default.bgColor;
             }
             else
             {
@@ -44,19 +45,29 @@ namespace Loud_O_Meter
 
         private void nud_timer_ValueChanged(object sender, EventArgs e)
         {
-            t_volume.Interval = (int)nud_timer.Value;
+            timerInterval = (int)nud_timer.Value;
+            t_volume.Interval = timerInterval;
+
+            Properties.Settings.Default.Interval = t_volume.Interval;
+            Properties.Settings.Default.Save();
         }
 
         private void tb_volume_Scroll(object sender, EventArgs e)
         {
             warnVol = tb_volume.Value;
-            nud_volume.Value = tb_volume.Value;
+            nud_volume.Value = warnVol;
+
+            Properties.Settings.Default.warnVol = warnVol;
+            Properties.Settings.Default.Save();
         }
 
         private void nud_volume_ValueChanged(object sender, EventArgs e)
         {
             warnVol = (int)nud_volume.Value;
-            tb_volume.Value = (int)nud_volume.Value;
+            tb_volume.Value = warnVol;
+
+            Properties.Settings.Default.warnVol = warnVol;
+            Properties.Settings.Default.Save();
         }
 
         private void einstellungenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -69,6 +80,14 @@ namespace Loud_O_Meter
         {
             About aboutForm = new About();
             aboutForm.Show();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            nud_volume.Value = warnVol;
+            tb_volume.Value = warnVol;
+
+            nud_timer.Value = timerInterval;
         }
     }
 }

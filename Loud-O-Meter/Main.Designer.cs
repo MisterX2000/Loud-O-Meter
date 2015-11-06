@@ -198,6 +198,7 @@
             this.MinimumSize = new System.Drawing.Size(160, 233);
             this.Name = "Main";
             this.Text = "Loud-O-Meter";
+            this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nud_timer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_volume)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_volume)).EndInit();
