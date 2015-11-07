@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Loud_O_Meter
@@ -15,6 +8,24 @@ namespace Loud_O_Meter
         public About()
         {
             InitializeComponent();
+        }
+
+        private void ll_homepage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(toolTip.GetToolTip(ll_homepage));
+            e.Link.Visited = true;
+        }
+
+        private void ll_github_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(toolTip.GetToolTip(ll_github));
+            e.Link.Visited = true;
+        }
+
+        private void ll_project_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(toolTip.GetToolTip(ll_project));
+            e.Link.Visited = true;
         }
     }
 }

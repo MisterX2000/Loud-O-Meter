@@ -62,7 +62,6 @@
             // t_volume
             // 
             this.t_volume.Enabled = true;
-            this.t_volume.Interval = 1;
             this.t_volume.Tick += new System.EventHandler(this.t_volume_Tick);
             // 
             // l_volume
@@ -94,7 +93,7 @@
             this.nud_timer.TabIndex = 2;
             this.toolTip.SetToolTip(this.nud_timer, "Zeitangabe in Millisekunden");
             this.nud_timer.Value = new decimal(new int[] {
-            1,
+            100,
             0,
             0,
             0});
